@@ -12,7 +12,6 @@ class RootIndex extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        Push this stuff!
         <Hero
           // image={author.heroImage.gatsbyImageData}
           // title={author.name}
