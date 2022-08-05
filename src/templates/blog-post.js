@@ -34,7 +34,6 @@ class BlogPostTemplate extends React.Component {
           title={post.title}
           content={post.description}
         />
-        <p>{post.id}</p>
         <div className={styles.container}>
           <span className={styles.meta}>
             {post.author?.name} &middot;{' '}
@@ -84,7 +83,6 @@ export const pageQuery = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       slug
       title
-      id
       author {
         name
       }

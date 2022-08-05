@@ -4,27 +4,42 @@
   margin: 0 auto;
   max-width: var(--size-max-width);
   min-height: 200px;
+  height: 100%;
   padding: 0 0 var(--size-gutter);
   position: relative;
 }
 
+.hero h1 {
+  display: none;
+}
+.hero h2 {
+  font-size: clamp(24px, 3.5vw, 56px);
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hero p {
+  font-size: clamp(12px, 1.5vw, 22px);
+  text-align: center;
+}
 .image {
   /*
     Ensure golden ratio for the hero size while limiting it to some extend to
     the viewport width
   */
-  height: 61.8vh;
-  max-height: 560px;
+  height: 100%;
+  /* max-height: 560px; */
   width: 100%;
 }
 
 .details {
-  background: var(--background);
+  background: inherit;
   left: 0;
   max-width: 40rem;
-  width: 85%;
-  padding: var(--space-2xl) var(--size-gutter) 0;
-  position: absolute;
+  width: 100%;
+  /* padding: var(--space-2xl) var(--size-gutter) 0; */
+  padding: 0 var(--size-gutter) 0;
+  position: relative;
 }
 
 .title {
@@ -38,34 +53,57 @@
 .content {
   font-size: var(--text-lead);
   font-weight: var(--semibold);
+  padding: 0 var(--space-4xl);
   margin: 0;
+}
+.hero button {
+  margin: 0 auto;
+  display: block;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--green);
+  font-family: var(--font-sans);
+  border: 2px solid var(--green);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  transition: .5s all;
+  background-color: inherit;
+  width: inherit;
+}
+
+.hero button:hover {
+  background-color: var(--green);
+  color: var(--white);
 }
 
 @media (min-width: 480px) {
   .details {
-    padding-top: var(--space-3xl);
+    /* padding-top: var(--space-3xl); */
+    padding-top: 0;
   }
 }
 
 @media (min-width: 768px) {
   .hero {
-    padding-top: var(--size-gutter);
+    padding-top: 0 var(--size-gutter);
   }
 
   .details {
-    max-width: 44rem;
-    padding: var(--space-3xl) var(--size-gutter) 0;
+    max-width: 100%;
+    /* padding: var(--space-3xl) var(--size-gutter) 0; */
+    padding: 0 var(--size-gutter) var(--space-3xl);
   }
 }
 
 @media (min-width: 1024px) {
   .image {
     margin-left: auto;
-    width: 85%;
+    width: 100%;
   }
 
   .details {
-    left: var(--size-gutter);
-    padding: var(--space-3xl) var(--size-gutter) 0 0;
+    /* left: var(--size-gutter); */
+    /* padding: 0; */
+    padding: 0  var(--size-gutter) var(--space-3xl);
   }
 }

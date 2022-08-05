@@ -1,20 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Prompt:ital,wght@0,100;0,300;0,600;0,900;1,100;1,300;1,600;1,900&display=swap');
+
+
 @font-face {
-  font-family: 'Inter var';
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: normal;
-  font-named-instance: 'Regular';
-  src: url('/fonts/Inter-roman.var.woff2?v=3.19') format('woff2');
+	font-family: 'HCo Gotham SSm';
+	src:url('/fonts/hco_fonts/woff2/GothamSSm-XLight_Web.woff2') format('woff2'),
+		url('/fonts/hco_fonts/woff/GothamSSm-XLight_Web.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'Inter var';
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: italic;
-  font-named-instance: 'Italic';
-  src: url('/fonts/Inter-italic.var.woff2?v=3.19') format('woff2');
+	font-family: 'HCo Gotham SSm';
+	src:url('/fonts/hco_fonts/woff2/GothamSSm-XLightItalic_Web.woff2') format('woff2'),
+		url('/fonts/hco_fonts/woff/GothamSSm-XLightItalic_Web.woff') format('woff');
+	font-weight: 200;
+	font-style: italic;
 }
+
+@font-face {
+	font-family: 'HCo Gotham SSm';
+	src:url('/fonts/hco_fonts/woff2/GothamSSm-Light_Web.woff2') format('woff2'),
+		url('/fonts/hco_fonts/woff/GothamSSm-Light_Web.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HCo Gotham SSm';
+	src:url('/fonts/hco_fonts/woff2/GothamSSm-LightItalic_Web.woff2') format('woff2'),
+		url('/fonts/hco_fonts/woff/GothamSSm-LightItalic_Web.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'HCo Gotham SSm';
+	src:url('/fonts/hco_fonts/woff2/GothamSSm-Book_Web.woff2') format('woff2'),
+		url('/fonts/hco_fonts/woff/GothamSSm-Book_Web.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HCo Gotham SSm';
+	src:url('/fonts/hco_fonts/woff2/GothamSSm-BookItalic_Web.woff2') format('woff2'),
+		url('/fonts/hco_fonts/woff/GothamSSm-BookItalic_Web.woff') format('woff');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'HCo Gotham SSm';
+	src:url('/fonts/hco_fonts/woff2/GothamSSm-Medium_Web.woff2') format('woff2'),
+		url('/fonts/hco_fonts/woff/GothamSSm-Medium_Web.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HCo Gotham SSm';
+	src:url('/fonts/hco_fonts/woff2/GothamSSm-MediumItalic_Web.woff2') format('woff2'),
+		url('/fonts/hco_fonts/woff/GothamSSm-MediumItalic_Web.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'HCo Gotham SSm';
+	src:url('/fonts/hco_fonts/woff2/GothamSSm-Bold_Web.woff2') format('woff2'),
+		url('/fonts/hco_fonts/woff/GothamSSm-Bold_Web.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HCo Gotham SSm';
+	src:url('/fonts/hco_fonts/woff2/GothamSSm-BoldItalic_Web.woff2') format('woff2'),
+		url('/fonts/hco_fonts/woff/GothamSSm-BoldItalic_Web.woff') format('woff');
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'HCo Gotham SSm';
+	src:url('/fonts/hco_fonts/woff2/GothamSSm-Black_Web.woff2') format('woff2'),
+		url('/fonts/hco_fonts/woff/GothamSSm-Black_Web.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'HCo Gotham SSm';
+	src:url('/fonts/hco_fonts/woff2/GothamSSm-BlackItalic_Web.woff2') format('woff2'),
+		url('/fonts/hco_fonts/woff/GothamSSm-BlackItalic_Web.woff') format('woff');
+	font-weight: 800;
+	font-style: italic;
+}
+
+
 
 html {
   scroll-behavior: smooth;
@@ -27,13 +110,30 @@ html * {
 body {
   background: var(--background);
   color: var(--text-color);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 16px;
   font-weight: var(--body);
   line-height: var(--default);
   margin: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+header {
+  background-color: var(--white);
+}
+section {
+  background-color: var(--white);
+}
+
+section#footer {
+  background-color: var(--green)
+}
+section#events {
+	padding-bottom: 3rem;
+  }
+main {
+  background-color: var(--background);
 }
 
 img {
@@ -49,6 +149,12 @@ h5,
 h6 {
   font-weight: var(--semibold);
   line-height: var(--dense);
+  font-family: var(--font-sans);
+  font-weight: var(--heavy);
+}
+p, a {
+  font-family: var(--font-body);
+  font-weight: var(--body);
 }
 
 a {

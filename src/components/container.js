@@ -5,14 +5,14 @@ const Container = ({ children, as = 'div' }) => {
   const Tag = as
 
   return (
-    <Tag
+    <Tag 
       style={{
         maxWidth: 'var(--size-max-width)',
         margin: '0 auto',
-        padding: 'var(--space-2xl) var(--size-gutter)',
+        padding: 'var(--space-2xl) var(--size-gutter) 0',
       }}
     >
-      {children}
+      {children}  
     </Tag>
   )
 }
